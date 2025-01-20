@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88e8524588.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+   <div class="container">
+    <nav>
+        <img src="./img/images.png" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+     </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, i'm <span>Rihab Zaidi</span><br> From Tunisia</h1>
+        </div>
+     </div>
+ </div>   
+ <!----------about-------->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/background.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me </h1>
+                <p>I am a Computer Science student passionate about web
+                     development and software engineering. My interests 
+                     lie primarily in HTML, CSS, and JavaScript, 
+                     which I use to create dynamic and responsive 
+                     websites. I’m always eager to learn new things and 
+                     take on exciting projects. My goal is to improve 
+                     myself and gain the skills needed to become a full 
+                     stack developer.</p>
+                     
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick= "opentab('Skills')">Skills</p>
+                        <p class="tab-links"  onclick= "opentab('Experience')">Experience</p>
+                        <p class="tab-links"  onclick= "opentab('Education')">Education</p>
+
+                       
+
+                     </div>
+                     <div class="tab-contents active-tab"  id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                            <li><span>Web devolepment</span><br>web app devolepement</li>
+                            <li><span>app devolepment </span><br>building android/ios apps</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents"  id="Experience">
+                        <ul>
+                            <li><span>2021 -current</span><br>Designing training at et institute</li>
+                            <li><span>2019- 2021</span><br>team lead at starApp</li>
+                            <li><span>2017 - 2019 </span><br>UI/UX design excutive at coin digital</li>
+                        </ul>
+                        <li><span>2016 - 2017 </span><br>internship at</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2016</span><br>Designing training</li>
+                            <li><span>2017</span><br>MBA from MIT banglore</li>
+                            <li><span>2018</span><br>BBA</li>
+                        </ul>
+                     </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!--------services------------------>
+    <div id="services"></div>
+        <div class="container">
+            <h1 class="sub-title">My Services </h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web design</h2>
+                    <p> Creating visually appealing and functional websites using 
+                        HTML, CSS, and JavaScript.</p>
+
+                      <a href="#">Learn more</a>
+                </div>
+                 
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX design</h2>
+                    <p> Creating visually appealing and functional websites using 
+                           HTML, CSS, and JavaScript.</p>
+   
+                    <a href="#">Learn more</a>
+                </div>
+                   
+                <div>
+                    <h2>app design</h2>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <p> Creating visually appealing and functional websites using 
+                               HTML, CSS, and JavaScript.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-------------portfolio------------>
+<script>
+ var tablinks = document.getElementsByClassName("tab-links");
+ var tabcontents = document.getElementsByClassName("tab-contents");
+ function opentab(tabname){
+     for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+     }
+     for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+     }
+     event.currentTarget.classList.add("active-link");
+     document.getElementById(tabname).classList.add("active-tab");
+ }
+
+</script>
+
+
+</body>
+</html>
