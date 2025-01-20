@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgotPwd.css" type="text/css">
+    <script src="javascript.js">
+ function verifEmail(){
+            adresse = document.form1.adresse.value;
+            taille = document.form1.adresse.value.length;
+    
+            validelog = false;
+            validedom = false;
+            valideext = false;
+    
+            arob = adresse.lastIndexOf("0");
+            login = adresse.substring(0,arob);
+            pointFinal = adresse.lastIndexOf(".");
+            extension = adresse.substring(pointFinal,taille);
+    
+            domaine = adresse.substring(arob+1,pointfinal);
+    
+            if(login.length > 2 ){
+                validelog = true;
+    
+            }
+            else{
+                validelog = false;
+            }
+            if( domaine.length > 1 ){
+                validedom = true;
+            }
+            else{
+                validedom = false;
+            }
+            if( extension.length == 2 || extension.length == 3){
+                valideext = true;
+            }
+            else{
+                valideext = false;
+            }
+            if ( validelog == true && validedom == true && valideext ==true){
+                alert('ok,l\'adresse e-mail saisie est valide.')
+                return true;
+            }
+            else{
+                alert('ceci n\'est pas une adresse e-mail valide.');
+                return false;
+            }}
+            
+           </script>
+</head>
+<body>
+    <header>
+        <h1>Récupération de votre compte</h1>
+    </header>
+    
+    <section id="recup-form">
+    <form id="recupForm">
+      
+            <label for="email">Email:</label>
+      <input type="email" id="email" name="adresse"  placeholder="Votre adresse email" required>
+
+
+      <label for="Code">Entrer le Code reçu par Email:</label>
+      <input type="number" id="code" name="code" placeholder="Votre adresse email" required>
+
+      <button onclick="verifEmail();" type="submit" class="open-button"><a href="mainPage.html" >ouvrir</a></button>
+
+
+        
+           
+       <h4>Vous n'avez pas reçu le code?</h4> 
+       Appuyer içi <a href="#"> pour envoyer une autre fois </a> 
+       
+</form>
+</form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css"> 
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+    // Get values from the form
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+  
+    // Simple confirmation message
+    alert('Merci ${fullName} ! Votre message a été envoyé avec succès.\nNous vous répondrons bientôt à ${email}.');
+  
+    // Reset the form
+    document.getElementById("contactForm").reset();
+  });</script>
+</head>
+<body>
+  <header>
+    <h1>Contactez-Nous</h1>
+  </header>
+
+  <!-- Contact Form -->
+  <section id="contact-form">
+    <form id="contactForm">
+      <h2>Informations de Contact</h2>
+      
+      <label for="fullName">Nom et Prénom:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Votre nom complet" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Votre message ici..." rows="4" required></textarea>
+
+      <button type="submit" class="order-button">Envoyer</button>
+    </form>
+
+    <!-- Contact Information -->
+    <div id="contact-details">
+      <h2>Nos Coordonnées</h2>
+      <p>Electronics Company</p>
+      <p>Email: <a href="#">contact@company.com</a></p>
+      <p>Téléphone: +216 33 455 789</p>
+      <p>Adresse: 123 Rue Hbib Borguiba, Tunis, Tunisia</p>
+    </div>
+  </section>
+
+  
+</body>
+</html>
+

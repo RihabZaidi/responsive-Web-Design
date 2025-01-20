@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passer Commande</title>
+  <link rel="stylesheet" href="styleCommande.css"> 
+  <script>
+  document.getElementById("commandeForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+  
+    // Récupérer les valeurs du formulaire
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const address = document.getElementById("address").value;
+    const product = document.getElementById("product").value;
+    const quantity = document.getElementById("quantity").value;
+  
+    // Message de confirmation
+    const confirmationMessage = `
+      Merci, ${name} !<br>
+      Votre commande de <strong>${quantity} x ${product}</strong> a été bien reçue.<br>
+      Nous vous contacterons par email à <strong>${email}</strong>.<br>
+      Adresse de livraison: <strong>${address}</strong>.
+    `;
+  
+    // Afficher la confirmation
+    document.getElementById("orderConfirmation").style.display = "block";
+    document.getElementById("confirmationMessage").innerHTML = confirmationMessage;
+  
+    // Réinitialiser le formulaire
+    document.getElementById("commandeForm").reset();
+  });</script>
+</head>
+<body>
+  <header>
+    <h1>Passer Commande</h1>
+  </header>
+
+  <section id="order-form">
+    <form id="commandeForm">
+      <!-- Information du client -->
+      <h2>Informations du Client</h2>
+      <label for="name">Nom et Prénom:</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+      <label for="address">Adresse:</label>
+      <textarea id="address" name="address" placeholder="Votre adresse complète" rows="3" required></textarea>
+
+      <label for="product">Produit:</label>
+      <select id="product" name="product" required>
+        <option value="">-- Choisissez un produit --</option>
+        <option value="HP Monitor">HP Monitor</option>
+        <option value="HP Laptop">HP Laptop</option>
+        <option value="Wireless Mouse">Wireless Mouse</option>
+      </select>
+
+      <label for="quantity">Quantité:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+
+      <!-- Bouton de commande -->
+      <button type="submit" class="order-button">Passer la commande</button>
+    </form>
+
+    <!-- Section pour afficher la confirmation -->
+    <div id="orderConfirmation" style="display: none;">
+      <h2>Commande Confirmée</h2>
+      <p id="confirmationMessage"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
+

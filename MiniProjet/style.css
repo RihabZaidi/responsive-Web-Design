@@ -1,0 +1,74 @@
+/* Contact Form */
+#make-form{
+   background-color: #f9f9f9;
+   padding: 20px;
+   max-width: 500px;
+   margin: 20px auto;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ header {
+   background-color: #007bff;
+   color: white;
+   text-align: center;
+   padding: 10px 0;
+ }
+ 
+ 
+ #make-form h2 {
+   text-align: center;
+ }
+ 
+ #makeForm label {
+   display: block;
+   margin: 10px 0 5px;
+ }
+ 
+ #makeForm input {
+   width: 50%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   margin-bottom: 15px;
+ }
+ a{
+   color: white;
+ }
+ 
+ .button {
+   display: block;
+   width: 50%;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+ }
+ .button1{
+   display: block;
+   width: 50%;
+   background-color: #5f6b77;
+   color: white;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+ 
+ }
+
+ 
+ .button1:hover {
+   background-color: #0056b3;
+ }
+ .button:hover {
+   background-color: #0056b3;
+ }
+ .button1{
+  margin: 20px;
+  
+ }
+ 
+ 

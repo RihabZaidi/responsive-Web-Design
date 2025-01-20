@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New account</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    
+    <script>
+       function validation(){
+      if(document.form1.nom.value == ""){
+        alert('entrez votre nom,svp!');
+        return false;
+      }
+      if(document.form1.prenom.value == ""){
+        alert('entrez votre prénom,svp!');
+        return false;
+      }
+      if( document.form1.adresse.value == "")
+      {
+        alert('entrez votre adresse email,svp!')
+        return false;
+      }
+      return true;
+       }
+        
+            function verifPassword(){
+  passe1 = document.form1.motDePasse1.value;
+   passe2 = document.form1.motDePasse2.value;
+    if( passe1 !=  passe2){
+        alert('les deux mots de passe sont different');
+        return false;
+    
+   
+        }
+        else{
+            alert('les mots de passe sont Valide');
+            return true;
+        }}
+       
+      </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur notre Site </h1>
+    </header>
+    
+    
+   <section id="make-form">
+    <form method=post id="makeForm" action="#" name="form1">
+    
+       
+  <h2>Inscrirer Vous Ici</h2>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre Nom" required>
+      
+             
+                    <label for="Prénom">Prénom:</label> 
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom"  required>  
+             
+             
+                    <label for="email">Email:</label>
+                    <input type="text"  id="email" name="adresse" placeholder="Votre adresse email" required>
+                   
+              
+               
+                    <label for="ad">Adresse:</label>
+                    <input type="text"  id="ad" name="ad" placeholder="Votre Adresse" required>
+              
+                    
+                    <label for="tel">Télèphone:</label>
+                    <input type="number"  id="tel" name="tel" placeholder="Votre Télèphone" required>
+              
+                    <label for="motDePasse1">Entrer un Mot de Passe:</label>
+                    <input type="password"  id="motDePasse1" name="motDePasse1" placeholder="Votre Mot de Passe" required>
+                    
+                    
+                    
+                    <label for="motDePasse2">Confirmer votre Mot de Passe:</label>
+                    <input type="password"  id="motDePasse2" name="motDePasse2" placeholder="Confirmer mot de passe" required>
+                    <button class="button" type="submit" onclick="verifPassword();">verifier password</button> 
+                  
+                 
+                  <button type="submit" class="button1"><a href="mainPage.html">S'inscrire</a></button>  
+                    
+             
+        
+     </form>
+    </section>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!-----page de site------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleProduit.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <script>
+      function searchProducts(){
+       const input = document.getElementById('searchInput').value.toLowerCase();
+       const products = document.querySelectorAll('.product');
+      
+       products.forEach(product => {
+        const productName = product.querySelector('h2').innerText.toLocaleLowerCase();
+        if (productName.includes(input)){
+          product.style.display='block';
+
+        }
+      else{
+        product.style.display ='none';
+      }})
+
+      }
+
+
+    </script>
+</head>
+<body>
+  
+  <header>
+   
+    <nav>
+      <ul class="nav-list">
+        <li><a href="mainPage.html">Acceuil</a></li>
+        <li><a href="passerCommande.html">Passer Commandes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      
+      <li><div class="search-bar">
+        <input type="text" id="searchInput" placeholder="chercher produits ...">
+        <button onclick="searchProducts()">chercher</button>
+      </div></li>
+    </ul>
+    </nav>
+  </header>
+  
+ 
+  <section id="products">
+    
+    
+    <div class="product">
+      
+      <div class="produit-c">
+        <img src="img1.jpg" alt="Monitor">
+           <h2>HP Monitor</h2>
+           <p>High-quality display monitor</p>
+           <button>commander</button>
+           <button>Ajouter à la carte </button>
+      </div>
+    
+      <div class="produit-c">
+          <img src="img2.jpg" alt="Monitor">
+              <h2>HP Laptop</h2>
+               <p>LightWeight and fast laptop</p>
+               <button>commander</button>
+               <button>Ajouter à la carte</button>
+      </div>
+      
+      <div class="produit-c">
+                <img src="img3.jpg" alt="Monitor">
+                  <h2>Wireless Mouse</h2>
+                   <p>Ergonomic and fast response</p>
+                   <button>commander</button>
+                   <button>Ajouter à la carte</button>
+      </div>
+      <div class="produit-c">
+        <img src="img4.jpg" alt="Monitor">
+            <h2> Keyboard</h2>
+             <p>LightWeight and fast Keyboard</p>
+             <button>commander</button>
+             <button>Ajouter à la carte</button>
+    </div>
+    <div class="produit-c">
+      <img src="img5.jpg" alt="Monitor">
+          <h2>Tablet Pro</h2>
+           <p>Tablet for Gaming and Work</p>
+           <button>commander</button>
+           <button>Ajouter à la carte</button>
+  </div>
+  <div class="produit-c">
+    <img src="img6.jpg" alt="Monitor">
+        <h2>Samsung Ultra</h2>
+         <p>LightWeight and fast SmartPhone</p>
+         <button>commander</button>
+         <button>Ajouter à la carte</button>
+</div>
+<div class="produit-c">
+  <img src="img7.jpg" alt="Monitor">
+      <h2>Samsung Ultra</h2>
+       <p>LightWeight and fast SmartPhone</p>
+       <button>commander</button>
+       <button>Ajouter à la carte</button>
+</div>
+<div class="produit-c">
+  <img src="img8.jpg" alt="Monitor">
+      <h2>iPhone 15</h2>
+       <p>LightWeight and fast SmartPhone</p>
+       <button>commander</button>
+       <button>Ajouter à la carte</button>
+</div>
+<div class="produit-c">
+  <img src="img9.jpg" alt="Monitor">
+      <h2>Tablet Pro</h2>
+       <p>High-performance Tablet</p>
+       <button>commander</button>
+       <button>Ajouter à la carte</button>
+</div>
+<div class="produit-c">
+  <img src="img10.jpg" alt="Monitor">
+      <h2>HP Laptop</h2>
+       <p>LightWeight and fast laptop</p>
+       <button>commander</button>
+       <button>Ajouter à la carte</button>
+</div>
+    
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Store.All rights reserved</p>
+  </footer>
+
+
+
+
+   
+</body>
+</html>

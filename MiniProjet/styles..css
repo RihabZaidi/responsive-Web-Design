@@ -1,0 +1,17 @@
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+input:invalid {
+    border-color: red;
+}
