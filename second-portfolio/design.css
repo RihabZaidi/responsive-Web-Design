@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    background:black;
+    color: #ededed;
+}
+/*----logo and navbar 5 choices----*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/*logo*/
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+/*----first line----*/
+.navbar a{
+    
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #3bdde6;
+   
+}
+
+.home{
+    height: 100vh;
+    /*background: url('wallpaper.jpg') no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;}
+
+.home-content{
+        max-width: 600px;
+       
+}
+
+.home-content h1{
+    position: relative;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #3bdde6;
+
+}
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+.home-content .btn-box{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+   
+}
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+/*.my-picture{
+    width:400px;
+    clip-path: circle(50%);
+    display: flex;
+    height: 200px;
+    object-fit: cover;
+    object-position: left;}*/
+.btn-box{
+    position: relative;
+}
+
+.btn-box a{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #3bdde6;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 1;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #3bdde6, 0 0 25px #3bdde6;
+}
+.btn-box a:hover {
+    box-shadow: 0 0 10px #3bdde6,
+     0 0 25px #3bdde6,0 0 60px #3bdde6,
+     0 0 100px #3bdde6,0 0 200px #3bdde6;
+}
+
+/*.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #3bdde6;}
+    
+.btn-box a:nth-child(2):hover {
+       color: rgb(43, 46, 11);
+        }
+
+.btn-box a:nth-child(2)::before {
+        background: #3bdde6;
+        }
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 400px;
+   background: black;
+    z-index: -1;
+    transition: .5s;
+}*/
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: transparent;
+   border: 2px solid #3bdde6; 
+   border-radius: 50%;
+   font-size: 20px;
+   color: #3bdde6;
+   text-decoration: none;
+   z-index: 1;
+   overflow: hidden;
+}
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+   background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3.5s;
+    z-index: 2;
+}
+.home-sci a:hover{
+    background: #3bdde6;
+    box-shadow: 0 0 20px #3bdde6;
+    color: black;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #3bdde6;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: rgb(4, 3, 3);
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+
+}
+
+.home-imgHover:hover{
+    background: black;
+    opacity: .8;
+}
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;}
+
+/*--------------------about--------------*/
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+    
+   
+    
+
+/*the part that needed image so this is the css*/
+/*.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}*/
+.about-text{
+    max-width: 600px;
+    padding: 20px;
+   /* display: flex;
+  align-self: center;
+  text-align: center;
+    justify-content: center;*/
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #3bdde6;
+
+}
+.about-text h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.button-about{
+    display:inline-block;
+padding: 12px 28px;
+background: #3bdde6; 
+border-radius: 40px;
+font-size: 16px;
+color: black;
+letter-spacing: 1px;
+text-decoration: none;
+font-weight: 600;
+opacity: 1;
+animation: slideTop 1s ease forwards;
+animation-delay: 2s;
+box-shadow: 0 0 5px #3bdde6, 0 0 25px #3bdde6;}
+
+.button-about:hover{
+    box-shadow: 0 0 5px #3bdde6,
+    0 0 25px #3bdde6, 0 0 50px #3bdde6,
+    0 0 100px #3bdde6,0 0 200px #3bdde6;
+}
+/*---------------------services------------------*/
+#services-list{
+    color: #3bdde6;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #3bdde6;
+}
+.container{
+    padding: 90px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px,1fr));
+    grid-gap: 80px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-radius: 20px;
+    transition: background 0.5s, transforms 0.5s;
+    box-shadow: 1px 1px 20px #3621c1,
+    1px 1px 40px #3621c1;
+
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+.services-list div a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #3bdde6;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 1;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #3bdde6, 0 0 25px #3bdde6;
+
+}
+.read:hover{
+    box-shadow: 0 0 5px #3bdde6,
+     0 0 25px #3bdde6,0 0 50px #3bdde6,
+     0 0 100px #3bdde6,0 0 200px #3bdde6;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+/*---------------------keys------------*/
+/*KEYFRAMES ANIMATION*/
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+
+}
+@keyframes manipActiveHover {
+    100%{
+        pointer-events: auto;
+    }
+}
